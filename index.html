@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Chad Smith Storymap Resume v2.0</title>
-        <link rel="icon" type="image/png" href="favicon.ico" />
+        <link rel="icon" type="image/png" href="./favicon.ico" />
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
         <meta name="description" content="Resume using an interactive map to display data. Authored by Chad Smith" />
         <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js"></script>
@@ -426,7 +426,7 @@
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="https://stackblitz.com/ChadESmith42" target="_blank">
+                        <a href="https://stackblitz.com/@ChadESmith42" target="_blank">
                             <img class="icon" src="./assets/icons/stackblitz.svg">
                             Stackblitz Profile: ChadESmith42
                         </a>
@@ -445,7 +445,7 @@
                     sources: {
                         'stamen-toner': {
                             type: 'raster',
-                            tiles: ['http://tile.stamen.com/toner/{z}/{x}/{y}.png'],
+                            tiles: ['https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'],
                             tileSize: 256,
                             attribution:
                                 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
@@ -466,6 +466,9 @@
                 bearing: 0,
                 pitch: 0
             });
+
+            map.addControl(new mapboxgl.NavigationControl('top-right'));
+            map.addControl(new mapboxgl.ScaleControl({maxWidth: 200, unit: 'imperial'}));
 
             var markerPoints = {
                 type: 'FeatureCollection',
