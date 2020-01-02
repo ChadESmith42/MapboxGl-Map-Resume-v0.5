@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Chad Smith Storymap Resume v2.0</title>
+        <link rel="icon" type="image/png" href="favicon.ico" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="description" content="Resume using an interactive map to display data. Authored by Chad Smith" />
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js"></script>
+        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+        <link href="./style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="map-container">
+            <div id="map" class="map"></div>
+        </div>
+
+        <div id="features">
+            <a href="http://codingbychad.com">
+                <h1 class="title" id="top">Chad Smith</h1>
+            </a>
+            <section id="overview" class="active no-highlight">
+                <div class="intro-card">
+                    <img src="./assets/images/profile.jpg" class="intro-img" />
+                    <span class="intro-title">
+                        Full-Stack ASP.NET Web Developer and GIS Analyst
+                    </span>
+                    <p class="intro-body">
+                        I have a solid foundation knowledge of designing and developing
+                        full-stack web applications using .NET framework. I have 10 years
+                        experience as a GIS analyst, 6 years of SQL Database experience, and
+                        4 years of small team leadership. My area of focus is spatial
+                        statistics and predictive analysis. I manage small teams in daily
+                        operations through planning, execution, reporting, and
+                        documentation.
+                    </p>
+                </div>
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="card-title">Front End</span>
+                            <div class="card-text">
+                                <p>
+                                    The "Front End" refers to technology for the browser. This includes designing the
+                                    layout structure, applying color and format, and developing interactive
+                                    capabilities, such as animations and event driven behaviors.
+                                </p>
+                                <p>
+                                    HTML5, JavaScript, jQuery, jQueryUI, CSS3, Responsive/Mobile Web
+                                    Development, Bootstrap, and Angular (v8+).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">Middle Tier</span>
+                        <div class="card-text">
+                            <p>
+                                The "Middle Tier" refers to server-side technologies for the web. Web pages using middle
+                                tier technologies have a server which sends complete web pages to the user. This adds
+                                security and functionality, but often at the price of performance. Middle tier can also
+                                refer to server-based web applications, which perform automation, data retrieval, and
+                                integration of third-party software or applications.
+                            </p>
+                            <p>
+                                Visual Studio 2015, C#.NET, ASP.NET, LINQ, MVC, Entity Framework, .NET Core, and
+                                Microsoft Azure Services (Cloud-based applications).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">Back End</span>
+                        <div class="card-text">
+                            <p>
+
+                            </p>
+                            <p>ADO.NET, SQL, SQL Server, SSMSE, MongoDB, CosmoDB, Microsoft Azure Services (Cloud-based
+                                data solutions).</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">GIS</span>
+                        <div class="card-text">
+                            <p>
+                                Geographic Information Systems (GIS) are tools that assist with the analysis of spatial
+                                data. These are the tools which compliment and enable a geographer's ability to conduct
+                                complex analysis using large data-sets.
+                            </p>
+                            <p>
+                                ArcMap/ArcDesktop, ArcGIS Server, ArcGIS Online, ArcGIS SDE,
+                                ArcGIS Pro, Leaflet.js, Mapbox-GL.js, and QGIS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="centriq" class="education">
+                <span class="sect-title">
+                    Centriq Career Course
+                    <img src="./assets/images/centriq-training-squarelogo-1514989930117.png" class="avatar" />
+                </span>
+                <div><span class="place">Leawood, Kansas</span><span class="year">2018</span></div>
+                <p class="sect-text">
+                    Solid foundation of designing and developing full-stack web
+                    applications using .NET framework.
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        HTML 5, CSS 3, JavaScript, BootStrap 3
+                    </li>
+                    <li class="list-group-item">C#, ASP.NET, MVC 5, LINQ</li>
+                    <li class="list-group-item">SQL, MSSQLSS</li>
+                    <li class="list-group-item">
+                        Developed multiple side-projects during training
+                    </li>
+                    <li class="list-group-item">Coding in a team environment</li>
+                </ul>
+                <img class="img-responsive" src="./assets/images/CentriqTraining.png">
+            </section>
+            <section id="esri" class="education">
+                <span class="sect-title">
+                    ESRI
+                    <img src="./assets/images/Esri-Logo-267x300-2.png" class="avatar" />
+                </span>
+                <div><span class="place">Redlands, CA</span><span class="year">2015</span>/div>
+                    <p>
+                        <span class="cert-title">ArcGIS for Server: Site Configuration and Administration</span>
+                        Learned to plan, configure, deploy, and manage an ArcGIS for Server
+                        system, that enables GIS content sharing across enterprise systems.
+                    </p>
+                    <img class="img-responsive" src="./assets/images/esri-campus.jpg">
+            </section>
+            <section id="denton" class="education">
+                <span class="sect-title">
+                    University of North Texas
+                    <img src="./assets/images/unt logo.png" class="avatar" />
+                </span>
+                <div><span class="place">Denton, Texas</span><span class="year">2009</span></div>
+                <p>Bachelor of Science in Geography. Minor in English Literature.</p>
+                <p>
+                    I focused on Urban Geography, Human Geography, and Data
+                    Modeling/Spatial Statistics. Recognized for excellence during UNT
+                    Scholar's Day 2008.
+                </p>
+                <img class="img-responsive" src="./assets/images/social-block-untsocial.jpg">
+            </section>
+            <section id="kuwait-city">
+                <span class="sect-title">
+                    Division G2X
+                    <img src="./assets/images/army emblem.png" class="avatar" />
+                </span>
+                <div>35th Infantry Division, Kuwait</div>
+                <div>May 2017 to April 2018</div>
+                <p>
+                    Served as the Subject Matter Expert for all matters related to Human
+                    Intelligence Collection and Counter-Intelligence for the Division
+                    Commander (Major General Command). Served in a senior field grade
+                    officer position (executive / director-level) as a junior
+                    non-commissioned officer (junior manager / team leader).
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Coordinated the day-to-day operations, including planning,
+                        operational control, and reporting.
+                    </li>
+                    <li class="list-group-item">
+                        Mentored subordinates and provided quality assurance for all
+                        products.
+                    </li>
+                </ul>
+                <img class="img-responsive" src="./assets/images/kuwaitcity.jpeg" />
+            </section>
+            <section id="opks_dea">
+                <span class="sect-title">
+                    Criminal Intelligence Analyst
+                    <img src="./assets/images/Army_National_Guard_logo.png" class="avatar" />
+                </span>
+                <div>MOARNG - Counter-Drug Program, Overland Park, Kansas</div>
+                <div>October 2016 to May 2017</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Supported federal criminal investigations, with a narcotics nexus,
+                        through data-mining and research of individuals.
+                    </li>
+                    <li class="list-group-item">
+                        Created maps, link analysis charts, event-timeline products, and
+                        written reports in support of criminal prosecutions.
+                    </li>
+                    <li class="list-group-item">
+                        Used Cellebrite products to collect cell phone evidence.
+                    </li>
+                    <li class="list-group-item">
+                        Certified Cellebrite Operator and Certified Cellebrite Analyst
+                    </li>
+                </ul>
+            </section>
+            <section id="opks_bv">
+                <span class="sect-title">
+                    GIS Analyst 4
+                    <img src="./assets/images/blackVeatch.jpg" class="avatar" />
+                </span>
+                <div>Black &amp; Veatch, Overland Park, Kansas</div>
+                <div>February 2015 to April 2016</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Supported multiple fiber optic construction projects and internal
+                        teams with GIS data management and analysis for the
+                        Telecommunications Division.
+                    </li>
+                    <li class="list-group-item">
+                        Used SQL and data management skills to develop and manage large
+                        databases and geospatial data-sets.
+                    </li>
+                    <li class="list-group-item">
+                        Created map web applications using ESRI’s web API for ArcGIS Server.
+                    </li>
+                    <li class="list-group-item">
+                        Introduced key efficiencies in data management by migrating data
+                        from stand-alone file systems to full SQL DB, reduced the
+                        opportunity for production errors and increased data sharing.
+                    </li>
+                    <li class="list-group-item">
+                        Implemented and modified data schema for multiple new data-sets and
+                        integrated new data-sets with other key industry standard data
+                        schemas.
+                    </li>
+                </ul>
+            </section>
+            <section id="kosovo">
+                <span class="sect-title">
+                    Human Intelligence Collector Team Leader
+                    <img src="./assets/images/army emblem.png" class="avatar" />
+                </span>
+                <div>504th BfSB, Camp Bondsteel, Kosovo</div>
+                <div>December 2013 to October 2014</div>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Supported the Brigade Commander’s Priority Intelligence
+                            Requirements through Military Source Operations and Strategic
+                            Debriefing.
+                        </li>
+                        <li class="list-group-item">
+                            Led and mentored a 4-person team in daily operations to include:
+                            pre-mission planning, operations, reporting, record keeping, and
+                            leadership briefing.
+                        </li>
+                        <li class="list-group-item">
+                            Communicated effectively with multiple non-Native English speakers
+                            from varying backgrounds and cultures.
+                        </li>
+                        <li class="list-group-item">
+                            Successfully communicated using a translator for some non-English
+                            speaking audiences.
+                        </li>
+                    </ul>
+                </div>
+                <img src="./assets/images/kosovo.jpg" class="img-responsive" />
+            </section>
+            <div class="spacer"></div>
+            <section id="ftleavenworth">
+                <span class="sect-title">
+                    Curriculum Instructor
+                    <img src="./assets/images/cgi logo.jpg" class="avatar" />
+                </span>
+                <div>CGI Federal, Fort Leavenworth, Kansas</div>
+                <div>February 2013 to October 2014</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Trained Research Managers for the Human Terrain System. Developed
+                        and taught GIS-based courses for adult learners using the ADDIE
+                        methodology.
+                    </li>
+                    <li class="list-group-item">
+                        Successfully communicated very technical subject matter to
+                        non-technical audience of learners
+                    </li>
+                </ul>
+            </section>
+            <div class="spacer"></div>
+            <section id="highlandsranch">
+                <span class="sect-title">
+                    Law Enforcement Analyst
+                    <img src="./assets/images/BAIR Logo.jpg" class="avatar" />
+                </span>
+                <div>BAIR Analytics, INC, Highlands Ranch, Colorado</div>
+                <div>August 2012 to February 2013</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Provided client support for law enforcement mapping service.
+                    </li>
+                    <li class="list-group-item">
+                        Created SQL translations from client's Records Management System
+                        schema to internal DB schema.
+                    </li>
+                    <li class="list-group-item">
+                        Trained clients to use software and web-based products. Conducted
+                        training in person, via telephone or Skype, and through webcasts.
+                    </li>
+                    <li class="list-group-item">
+                        Conducted advanced GIS analysis for selected clients.
+                    </li>
+                </ul>
+                <img src="./assets/images/colorado.jpg" class="img-responsive img-rounded" />
+            </section>
+            <div class="spacer"></div>
+            <section id="kabul">
+                <span class="sect-title">
+                    Research Manager (GS-13)
+                    <img src="./assets/images/army emblem.png" class="avatar" />
+                </span>
+                <div>Human Terrain Systems (US Army TRADOC G2), Kabul, Afghanistan</div>
+                <div>May 2011 to June 2012</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Coordinated research from 20+ teams for a military program based in
+                        Afghanistan.
+                    </li>
+                    <li class="list-group-item">
+                        Created geospatial intelligence products from research materials.
+                        Coordinated requests for surveys between Social Science directorate
+                        and field teams.
+                    </li>
+                </ul>
+            </section>
+            <div class="spacer"></div>
+            <section id="macdill">
+                <span class="sect-title">
+                    Senior Human Terrain Analyst
+                    <img src="./assets/images/Courage Services Logo.png" class="avatar" />
+                </span>
+                <div>Courage Services, MacDill AFB, Florida</div>
+                <div>October 2010 to May 2011</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Created written reports for various Intelligence Preparation of the
+                        Battlefield products for SOCOM personnel.
+                    </li>
+                    <li class="list-group-item">
+                        Conducted in-depth research and analysis of specific regions
+                        throughout the world.
+                    </li>
+                    <li class="list-group-item">
+                        Created spatial data-sets for analysis by proprietary software tools.
+                    </li>
+                </ul>
+            </section>
+            <div class="spacer"></div>
+            <section id="dallas">
+                <span class="sect-title">
+                    Senior Corporal of Police<img src="./assets/images/badge-dpd.png" class="avatar" />
+                </span>
+                <div>Dallas Police Department, Dallas, Texas</div>
+                <div>September 2000 to August 2009</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Served as patrol officer, bicycle officer, crime analyst, analyst
+                        detective, field training officer.
+                    </li>
+                    <li class="list-group-item">
+                        Developed GIS methods to identify critical need areas for police
+                        services and track changes in those areas.
+                    </li>
+                    <li class="list-group-item">
+                        Used SQL and data management skills to improve analysis
+                        capabilities.
+                    </li>
+                    <li class="list-group-item">
+                        Improved data geocode matching rate from 68% match to over 99.999%
+                        for over 15 million records
+                    </li>
+                </ul>
+                <img src="./assets/images/police.jpg" class="img-responsive" />
+            </section>
+            <section id="paris">
+                <span class="sect-title">Foreign Language</span>
+                <p>
+                    <img src="./assets/images/paris.jpeg" class="avatar" />I read and
+                    write French at a conversant or literate level. I speak French at an
+                    elementary or conversational level. I learned French in adulthood. I
+                    used the Memrise application to learn vocabulary and grammar rules. I
+                    also subscribed to several YouTube channels to learn idiomatic French
+                    and to become more comfortable with native speaker accents. I also
+                    read (mostly) Le Monde to keep current on current events and expand my
+                    vocabulary. I recently spent a week in Paris. I can proudly say that
+                    my French was adequate to carry on most day-to-day activities, but was
+                    sadly inadequate to file a police report (I was robbed.). C'est la
+                    vie.
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Intermediate written French, Novice spoken French.
+                    </li>
+                    <li class="list-group-item">
+                        Experience working with translators for day-to-day operations.
+                    </li>
+                </ul>
+            </section>
+            <section id="kansas-city">
+                <span class="sect-title">Contact</span>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="mailto:chad@codingbychad.com">
+                            <img class="icon" src="./assets/icons/email_icon.svg">
+                            chad@codingbychad.com
+                        </a></li>
+                    <li class="list-group-item">
+                        <a href="tel:+017198391071">
+                            <img class="icon" src="./assets/icons/phone_icon.svg">
+                            +1 719.839.1071
+                        </a>
+                    </li>
+                    <li class="list-group-item"> <a href="http://www.codingbychad.com" target="_blank">
+                            <img class="icon" src="./assets/icons/web_icon.svg">
+                            codingbychad.com
+                        </a>
+                    </li>
+                    <li class="list-group-item"> <a href="https://www.linkedin.com/in/chadesmith">
+                            <img class="icon" src="./assets/icons/_ionicons_svg_logo-linkedin.svg">
+                            LinkedIn Profile: chadesmith
+                        </a></li>
+                    <li class="list-group-item">
+                        <a href="https://github.com/ChadESmith42" target="_blank">
+                            <img class="icon" src="./assets/icons/_ionicons_svg_logo-github.svg">
+                            GitHub Profile: ChadESmith42
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://stackblitz.com/ChadESmith42" target="_blank">
+                            <img class="icon" src="./assets/icons/stackblitz.svg">
+                            Stackblitz Profile: ChadESmith42
+                        </a>
+                    </li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </section>
+            <!--Added this link to get resume back to the top quickly.-->
+            <div class="home-link"><a href="#top">Back to the top.</a></div>
+        </div>
+        <script>
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: {
+                    version: 8,
+                    sources: {
+                        'stamen-toner': {
+                            type: 'raster',
+                            tiles: ['http://tile.stamen.com/toner/{z}/{x}/{y}.png'],
+                            tileSize: 256,
+                            attribution:
+                                'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+                        }
+                    },
+                    layers: [
+                        {
+                            id: 'stamen-toner',
+                            type: 'raster',
+                            source: 'stamen-toner',
+                            minzoom: 0,
+                            maxzoom: 22
+                        }
+                    ]
+                },
+                center: [-94.585818, 39.103259],
+                zoom: 10,
+                bearing: 0,
+                pitch: 0
+            });
+
+            var markerPoints = {
+                type: 'FeatureCollection',
+                features: [
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Centriq Training Career Program</span><p>Full-Stack Web Developer Track</p><p>Solid foundation of designing and developing full-stack web applications using .NET framework.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-94.61131', '38.96930']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">US Army, 504th BfSB</span><p>Supported the Brigade Commander’s Priority Intelligence Requirements through Military Source Operations and Strategic Debriefing. Led and mentored a 4-person team in daily operations to include: pre-mission planning, operations, reporting, record keeping, and leadership briefing. Communicated effectively with multiple non-Native English speakers from varying backgrounds and cultures. Successfully communicated using a translator for some non-English speaking audiences.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['21.237423', '42.375574']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Black & Veatch</span><p>Key Achievements: <ul class="list-group"><li class="list-group-item">Introduced key efficiencies in data management by migrating data from stand-alone file systems to full SQL DB, reduced the opportunity for production errors and increased data sharing.</li><li class="list-group-item">Implemented and modified data schema for multiple new data-sets and integrated new data-sets with other key industry standard data schemas.</li></ul></p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-94.661737', '38.919109']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Bair Analytics</span><p>Provided client support for law enforcement mapping service. Created SQL translations from client’s RMS schema to internal schema. Trained clients to use software and web-based products. Conducted advanced GIS analysis for select clients.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-104.9995784', '39.5570445']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">University of North Texas</span><h3>Bachelor of Science, Geography</h3><p>Minor in English Literature. Focused on urban and human geography.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-97.1563381', '33.2108131']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Human Terrain Systems</span><p>Coordinated research from 20+ teams for a military program based in Afghanistan. Created geospatial intelligence products from research materials. Coordinated requests for surveys between Social Science directorate and field teams.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['69.218288', '34.571323']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Courage Services, INC</span><p>Created written reports for various Intelligence Preparation of the Battlefield products for SOCOM personnel. Conducted in-depth research and analysis of specific regions throughout the world. Created spatial data-sets for analysis by proprietary software tools.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-82.51933', '27.8429966']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Dallas Police Department</span><p>Served as patrol officer, bicycle officer, crime analyst, analyst detective, field training officer. Developed GIS methods to identify critical need areas for police services and track changes in those areas. Used SQL and data management skills to improve analysis capabilities.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-96.794725', '32.767715']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">French Language Skills</span><p>Demonstrated desire to continue learning and discipline to acquire skills. Aussi, les pain au chocolat sont excellent.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['2.293518', '48.858462']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">CGI Federal</span><p>Trained Research Managers for the Human Terrain System. Developed and taught GIS-based courses for adult learners using the ADDIE methodology. Successfully communicated very technical subject matter to non-technical audience of learners.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-94.917270', '39.358426']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">US Army, 35th Infantry Division</span><p>Served as the Subject Matter Expert for all matters related to Human Intelligence Collection and Counter-Intelligence for the Division Commander. Coordinated the day-to-day operations, including planning, operational control, and reporting. Mentored subordinates and provided quality assurance for all products.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['48.171847', '28.905663']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Missouri Army National Guard</span><p>Supported federal criminal investigations through data mining and research of individuals. Created maps, link analysis charts, event-timeline products, and written reports in support of criminal prosecutions.Used Cellebrite products to collect cell phone evidence.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: ['-94.675231', '38.927940']
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">ESRI</span><h3>ArcGIS Server Administrator</h3><p>Installation and administration of ArcGIS Server.</p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-117.190277, 34.057240]
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        properties: {
+                            description:
+                                '<span class="sect-title">Contact Info</span><p><ul class="list-group"><li class="list-group-item"><span class="label">Email</span><span class="data"><a href="mailto:chad@codingbychad.com">chad@codingbychad.com</a></span></li><li class="list-group-item"><span class="label">Phone</span><span class="data">(719) 839-1071</span></li><li class="list-group-item"><span class="label">LinkedIn Profile</span><span class="data"><a href="https://www.linkedin.com/in/chadesmith" target="_blank">Chad Smith</a></span></li><li class="list-group-item"><span class="label">GitHub Profile</span><span class="data"><a href="https://github.com/ChadESmitdiv2" target="_blank">ChadESmith</a></span></li></ul></p>'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-94.585818, 39.103259]
+                        }
+                    }
+                ]
+            };
+
+            map.on('load', function ()
+            {
+                CreateMarkers();
+            });
+            map.on('click', 'markers', function (e)
+            {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+                new mapboxgl.Popup({ className: 'popups' })
+                    .setLngLat(coordinates)
+                    .setHTML(description)
+                    .addTo(map);
+            });
+            map.on('mouseenter', 'markers', function ()
+            {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseleave', 'markers', function ()
+            {
+                map.getCanvas().style.cursor = '';
+            });
+
+            function CreateMarkers()
+            {
+                map.addSource('markers',
+                    {
+                        type: 'geojson',
+                        data: markerPoints
+                    });
+                map.addLayer({
+                    id: 'markers',
+                    type: 'circle',
+                    source: 'markers',
+                    paint: {
+                        'circle-radius': {
+                            base: 14,
+                            stops: [
+                                [0, 10],
+                                [22, 180]
+                            ]
+                        },
+                        'circle-color': "#43b0f1",
+                        'circle-opacity': .75,
+                        'circle-stroke-color': "#1e3d58",
+                        'circle-stroke-width': 4
+                    }
+                })
+            }
+
+            var chapters = {
+                centriq: {
+                    bearing: 0,
+                    center: [-94.61131, 38.9693],
+                    zoom: 13,
+                    pitch: 20
+                },
+                esri: {
+                    bearing: 0,
+                    center: [-117.190277, 34.05724],
+                    zoom: 13,
+                    pitch: 20
+                },
+                denton: {
+                    center: [-97.1563381, 33.2108131],
+                    bearing: 35,
+                    zoom: 13.5,
+                    pitch: 20
+                },
+                'kuwait-city': {
+                    bearing: 25,
+                    center: [48.171847, 28.905663],
+                    zoom: 13,
+                    speed: 0.6,
+                    pitch: 40
+                },
+                opks_dea: {
+                    bearing: 90,
+                    center: [-94.675231, 38.92794],
+                    zoom: 16
+                },
+                opks_bv: {
+                    bearing: 270,
+                    center: [-94.661737, 38.919109],
+                    zoom: 16,
+                    pitch: 20,
+                    speed: 0.5
+                },
+                kosovo: {
+                    bearing: 0,
+                    center: [21.237423, 42.375574],
+                    zoom: 11.5
+                },
+                ftleavenworth: {
+                    bearing: 90,
+                    center: [-94.91727, 39.358426],
+                    zoom: 17.3,
+                    pitch: 40
+                },
+                highlandsranch: {
+                    bearing: 0,
+                    center: [-104.9995784, 39.5570445],
+                    zoom: 14.3,
+                    pitch: 20
+                },
+                kabul: {
+                    bearing: 0,
+                    center: [69.218288, 34.571323],
+                    zoom: 13,
+                    pitch: 20
+                },
+                macdill: {
+                    center: [-82.51933, 27.8429966],
+                    bearing: 35,
+                    zoom: 13.5,
+                    pitch: 20
+                },
+                dallas: {
+                    center: [-96.794725, 32.767715],
+                    bearing: 35,
+                    zoom: 17,
+                    pitch: 20
+                },
+                paris: {
+                    bearing: 90,
+                    center: [2.293518, 48.858462],
+                    zoom: 13,
+                    speed: 0.6,
+                    pitch: 40
+                },
+                'kansas-city': {
+                    bearing: 0,
+                    center: [-94.585818, 39.103259],
+                    zoom: 11.5,
+                    speed: 0.6,
+                    pitch: 40
+                },
+                overview: {
+                    bearing: 0,
+                    center: [-94.585818, 39.103259],
+                    zoom: 11.5,
+                    speed: 0.6,
+                    pitch: 40
+                }
+            };
+            var activeChapterName = 'overview';
+            window.onscroll = function ()
+            {
+                var chapterNames = Object.keys(chapters);
+                for (var i = 0; i < chapterNames.length; i++) {
+                    var chapterName = chapterNames[i];
+                    if (isElementOnScreen(chapterName)) {
+                        setActiveChapter(chapterName);
+                        break;
+                    }
+                }
+            };
+
+            function setActiveChapter(chapterName)
+            {
+                if (chapterName === activeChapterName) return;
+                map.flyTo(chapters[chapterName]);
+                if (
+                    !document.getElementById(chapterName).classList.contains('active')
+                ) {
+                    document.getElementById(chapterName).classList.toggle('active');
+                }
+                if (
+                    document
+                        .getElementById(activeChapterName)
+                        .classList.contains('active')
+                ) {
+                    document.getElementById(activeChapterName).classList.toggle('active');
+                }
+                activeChapterName = chapterName;
+            }
+
+            function isElementOnScreen(id)
+            {
+                var bounds = document.getElementById(id).getBoundingClientRect();
+                var viewHeight = Math.max(
+                    document.documentElement.clientHeight,
+                    window.innerHeight
+                );
+                return !(bounds.bottom < 0 || bounds.top - viewHeight >= 0);
+            }
+        </script>
+    </body>
+
+</html>

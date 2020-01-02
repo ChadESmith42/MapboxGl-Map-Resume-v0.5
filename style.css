@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Special+Elite');
+
+:root {
+        --navy: #1e3d58;
+        --royal: #057dcd;
+        --grotto: #43b0f1;
+        --white: #e8eef1;
+        --opaque-white: rgba(232, 238, 241, 0.5);
+        --opaque-navy: rgba(30, 61, 88, 0.5);
+        --opaque-royal: rgba(5, 125, 205, 0.5);
+        --opaque-grotto: rgba(67, 176, 241, 0.5);
+}
+
+body {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 18px;
+    background-color: var(--navy);
+    width: calc(100% - 24px);
+    display: grid;
+    grid-template-columns: [ startMap ] 50% [ endMap startText ] calc(50% - 48px) [ endText];
+    column-gap: 24px;
+}
+
+h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.map-container {
+    grid-column: startMap / endMap;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    border-radius: 8px;
+}
+
+#features {
+    grid-column: startText / endText;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(16, auto);
+    row-gap: 52px;
+    -ms-overflow-style: none;
+}
+
+#features::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    grid-row: auto;
+    padding: 16px 24px 8px 24px;
+    line-height: 24px;
+    border: none;
+    border-radius: 8px;
+    opacity: 0.25;
+    font-size: 18;
+    background-color: var(--grotto);
+    color: var(--navy);
+}
+
+section.active {
+    opacity: 1;
+}
+
+.title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px 24px 16px 24px;
+    background-color: var(--royal);
+    color: var(--white);
+    border-radius: 8px;
+}
+
+.intro-card {
+    display: grid;
+    grid-template-columns: [ startL ] 80px [ endL startR ] auto [ endR ];
+    grid-template-rows: [ startTop ] auto [ endTop startBottom ] auto [ endBottom ];
+    column-gap: 16px;
+}
+
+.intro-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    grid-column: startL / endL;
+    grid-row: startTop / endBottom;
+    align-self: start;
+
+}
+
+.intro-title {
+    grid-column: startR / endR;
+    grid-row: startTop / endTop;
+    align-self: end;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.intro-body {
+    grid-column: startR / endR;
+    grid-row: startBottom / endBottom;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px;
+}
+
+.card-group {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 16px;
+}
+
+.card {
+    grid-row: auto;
+    border: 2px solid var(--white);
+    border-radius: 8px;
+    background-color: var(--white);
+    padding: 8px 16px 0 16px;
+}
+
+.card:hover, .card:focus {
+    border: 2px solid var(--navy);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.card-text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.education {
+    background-color: var(--royal);
+    color: var(--white);
+}
+
+.sect-title {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.place {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0 8px 0 0;
+    margin: 0;
+}
+
+.year {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0 16px 0 0;
+    margin: 0;
+}
+
+.sect-text {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 24px 0 0 0;
+    width: 100%;
+}
+
+.cert-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.list-group {
+    list-style: none;
+    list-style-position: outside;
+    padding: 0;
+}
+
+.list-group-item {
+    padding: 8px 0 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover, a:focus {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.img-responsive {
+    box-sizing: content-box;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+.popups {
+    font-family: 'Oswald', sans-serif;
+    max-width: 400px;
+    padding: 16px;
+}
+
+.mapboxgl-popup-content {
+    background-color: var(--royal);
+    color: var(--white);
+    font-size: 18px;
+    padding: 24px;
+}
+
+.mapboxgl-popup-content .sect-title {
+    background-color: var(--white);
+    color: var(--navy);
+    display: block;
+    padding: 8px 24px 8px 24px;
+    border-radius: 8px;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    border-top-color: var(--royal);
+}
+
+.mapboxgl-popup-close-button {
+    color: var(--white);
+    font-size: 20px;
+    padding: 4px;
+    height: 32px;
+    width: 32px;
+    background-color: var(--navy);
+    border-radius: 50%;
+    margin: 8px;
+}
+
+.mapboxgl-popup-close-button:hover,
+.mapboxgl-popup-close-button:focus {
+    color: var(--navy);
+    background-color: var(--white);
+}
+
+.label {
+    padding: 0 16px 0 0;
+}
+
+.home-link {
+    text-align: center;
+    margin: auto 0;
+    text-decoration: none;
+    min-height: 300px;
+    color: var(--white);
+}
+
+.home-link:hover {
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#kansas-city {
+    margin: 48px 0 0 0;
+}
+
+#overview {
+    opacity: 1;
+}
+
+.icon {
+    background-color: var(--white);
+    padding: 2px;
+    border-radius: 8px;
+    border: 2px solid var(--navy);
+    margin: 0 8px 0 0;
+    height: 24px;
+    width: 24px;
+    fill: var(--grotto);
+}
