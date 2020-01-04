@@ -21,5 +21,6 @@
         "highlandsranch",
         "macdill",
         "opks"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }

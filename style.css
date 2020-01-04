@@ -47,7 +47,7 @@ h1 {
     grid-column: startText / endText;
     font-family: sans-serif;
     overflow-y: scroll;
-    width: 100%;
+    width: calc(100% - 24px);
     display: grid;
     grid-template-rows: repeat(16, auto);
     row-gap: 52px;
@@ -65,7 +65,7 @@ section {
     border: none;
     border-radius: 8px;
     opacity: 0.25;
-    font-size: 18;
+    font-size: 18px;
     background-color: var(--grotto);
     color: var(--navy);
 }
@@ -75,7 +75,6 @@ section.active {
 }
 
 .title {
-    width: 100%;
     margin: 0 auto;
     text-align: center;
     padding: 8px 24px 16px 24px;
@@ -203,6 +202,7 @@ section.active {
 a {
     text-decoration: none;
     color: inherit;
+    max-width: 96vw;
 }
 
 a:hover, a:focus {
@@ -213,6 +213,7 @@ a:hover, a:focus {
 .img-responsive {
     box-sizing: content-box;
     max-height: 300px;
+    max-width: calc(92vw - 24px);
     border-radius: 8px;
 }
 
@@ -220,6 +221,7 @@ a:hover, a:focus {
     font-family: 'Oswald', sans-serif;
     max-width: 400px;
     padding: 16px;
+    border-radius: 8px;
 }
 
 .mapboxgl-popup-content {
@@ -267,7 +269,7 @@ a:hover, a:focus {
     text-align: center;
     margin: auto 0;
     text-decoration: none;
-    min-height: 300px;
+    min-height: 25vh;
     color: var(--white);
 }
 
@@ -294,4 +296,45 @@ a:hover, a:focus {
     height: 24px;
     width: 24px;
     fill: var(--grotto);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        max-width: calc(600px - 48px);
+        display: flow-root;
+    }
+
+    .map-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 16px);
+        height: 50%;
+        margin: 2px 8px 16px 8px;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+        border-radius: 8px;
+    }
+
+    #features {
+        position: absolute;
+        bottom: 0;
+        top: calc(50% + 16px);
+        width: calc(100vw - 24px);
+        box-sizing: border-box;
+        row-gap: 24px;
+    }
+    section {
+        grid-row: auto;
+        padding: 12px 8px 0 8px;
+    }
+
+    .card {
+        padding: 12px 8px 0 8px;
+        margin: 8px 0 16px 0;
+    }
 }
