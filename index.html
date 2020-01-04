@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div class="map-container">
+        <div class="map-container" id="map-container">
             <div id="map" class="map"></div>
         </div>
 
@@ -125,7 +125,7 @@
                     ESRI
                     <img src="./assets/images/Esri-Logo-267x300-2.png" class="avatar" />
                 </span>
-                <div><span class="place">Redlands, CA</span><span class="year">2015</span>/div>
+                <div><span class="place">Redlands, CA</span><span class="year">2015</span></div>
                     <p>
                         <span class="cert-title">ArcGIS for Server: Site Configuration and Administration</span>
                         Learned to plan, configure, deploy, and manage an ArcGIS for Server
@@ -439,23 +439,23 @@
         </div>
         <script>
             var map = new mapboxgl.Map({
-                container: 'map',
+                container: "map",
                 style: {
                     version: 8,
                     sources: {
-                        'stamen-toner': {
-                            type: 'raster',
+                        "stamen-toner": {
+                            type: "raster",
                             tiles: ['https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png'],
                             tileSize: 256,
                             attribution:
-                                'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+                                `Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.`
                         }
                     },
                     layers: [
                         {
-                            id: 'stamen-toner',
-                            type: 'raster',
-                            source: 'stamen-toner',
+                            id: "stamen-toner",
+                            type: "raster",
+                            source: "stamen-toner",
                             minzoom: 0,
                             maxzoom: 22
                         }
@@ -467,240 +467,245 @@
                 pitch: 0
             });
 
-            map.addControl(new mapboxgl.NavigationControl('top-right'));
-            map.addControl(new mapboxgl.ScaleControl({maxWidth: 200, unit: 'imperial'}));
+            // map.addControl(new mapboxgl.NavigationControl("top-right"));
+            // map.addControl(new mapboxgl.ScaleControl({maxWidth: 200, unit: "imperial"}));
 
             var markerPoints = {
-                type: 'FeatureCollection',
+                type: "FeatureCollection",
                 features: [
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'centriq',
+                            location: "centriq",
                             description:
-                                '<span class="sect-title">Centriq Training Career Program</span><p>Full-Stack Web Developer Track</p><p>Solid foundation of designing and developing full-stack web applications using .NET framework.</p>'
+                                `<span class="sect-title">Centriq Training Career Program</span><p>Full-Stack Web Developer Track</p><p>Solid foundation of designing and developing full-stack web applications using .NET framework.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-94.61131', '38.96930']
+                            type: "Point",
+                            coordinates: [-94.61131 , 38.96930]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'kosovo',
+                            location: "kosovo",
                             description:
-                                '<span class="sect-title">US Army, 504th BfSB</span><p>Supported the Brigade Commander’s Priority Intelligence Requirements through Military Source Operations and Strategic Debriefing. Led and mentored a 4-person team in daily operations to include: pre-mission planning, operations, reporting, record keeping, and leadership briefing. Communicated effectively with multiple non-Native English speakers from varying backgrounds and cultures. Successfully communicated using a translator for some non-English speaking audiences.</p>'
+                                `<span class="sect-title">US Army, 504th BfSB</span><p>Supported the Brigade Commander’s Priority Intelligence Requirements through Military Source Operations and Strategic Debriefing. Led and mentored a 4-person team in daily operations to include: pre-mission planning, operations, reporting, record keeping, and leadership briefing. Communicated effectively with multiple non-Native English speakers from varying backgrounds and cultures. Successfully communicated using a translator for some non-English speaking audiences.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['21.237423', '42.375574']
+                            type: "Point",
+                            coordinates: [ 21.237423, 42.375574 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'opks_bv',
+                            location: "opks_bv",
                             description:
-                                '<span class="sect-title">Black & Veatch</span><p>Key Achievements: <ul class="list-group"><li class="list-group-item">Introduced key efficiencies in data management by migrating data from stand-alone file systems to full SQL DB, reduced the opportunity for production errors and increased data sharing.</li><li class="list-group-item">Implemented and modified data schema for multiple new data-sets and integrated new data-sets with other key industry standard data schemas.</li></ul></p>'
+                                `<span class="sect-title">Black & Veatch</span><p>Key Achievements: <ul class="list-group"><li class="list-group-item">Introduced key efficiencies in data management by migrating data from stand-alone file systems to full SQL DB, reduced the opportunity for production errors and increased data sharing.</li><li class="list-group-item">Implemented and modified data schema for multiple new data-sets and integrated new data-sets with other key industry standard data schemas.</li></ul></p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-94.661737', '38.919109']
+                            type: "Point",
+                            coordinates: [ -94.661737, 38.919109 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'highlandsranch',
+                            location: "highlandsranch",
                             description:
-                                '<span class="sect-title">Bair Analytics</span><p>Provided client support for law enforcement mapping service. Created SQL translations from client’s RMS schema to internal schema. Trained clients to use software and web-based products. Conducted advanced GIS analysis for select clients.</p>'
+                                `<span class="sect-title">Bair Analytics</span><p>Provided client support for law enforcement mapping service. Created SQL translations from client’s RMS schema to internal schema. Trained clients to use software and web-based products. Conducted advanced GIS analysis for select clients.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-104.9995784', '39.5570445']
+                            type: "Point",
+                            coordinates: [-104.9995784, 39.5570445]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'denton',
+                            location: "denton",
                             description:
-                                '<span class="sect-title">University of North Texas</span><h3>Bachelor of Science, Geography</h3><p>Minor in English Literature. Focused on urban and human geography.</p>'
+                                `<span class="sect-title">University of North Texas</span><h3>Bachelor of Science, Geography</h3><p>Minor in English Literature. Focused on urban and human geography.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-97.1563381', '33.2108131']
+                            type: "Point",
+                            coordinates: [ -97.1563381, 33.2108131 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'kabul',
+                            location: "kabul",
                             description:
-                                '<span class="sect-title">Human Terrain Systems</span><p>Coordinated research from 20+ teams for a military program based in Afghanistan. Created geospatial intelligence products from research materials. Coordinated requests for surveys between Social Science directorate and field teams.</p>'
+                                `<span class="sect-title">Human Terrain Systems</span><p>Coordinated research from 20+ teams for a military program based in Afghanistan. Created geospatial intelligence products from research materials. Coordinated requests for surveys between Social Science directorate and field teams.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['69.218288', '34.571323']
+                            type: "Point",
+                            coordinates: [ 69.218288, 34.571323 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'macdill',
+                            location: "macdill",
                             description:
-                                '<span class="sect-title">Courage Services, INC</span><p>Created written reports for various Intelligence Preparation of the Battlefield products for SOCOM personnel. Conducted in-depth research and analysis of specific regions throughout the world. Created spatial data-sets for analysis by proprietary software tools.</p>'
+                                `<span class="sect-title">Courage Services, INC</span><p>Created written reports for various Intelligence Preparation of the Battlefield products for SOCOM personnel. Conducted in-depth research and analysis of specific regions throughout the world. Created spatial data-sets for analysis by proprietary software tools.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-82.51933', '27.8429966']
+                            type: "Point",
+                            coordinates: [ -82.51933, 27.8429966 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'dallas',
+                            location: "dallas",
                             description:
-                                '<span class="sect-title">Dallas Police Department</span><p>Served as patrol officer, bicycle officer, crime analyst, analyst detective, field training officer. Developed GIS methods to identify critical need areas for police services and track changes in those areas. Used SQL and data management skills to improve analysis capabilities.</p>'
+                                `<span class="sect-title">Dallas Police Department</span><p>Served as patrol officer, bicycle officer, crime analyst, analyst detective, field training officer. Developed GIS methods to identify critical need areas for police services and track changes in those areas. Used SQL and data management skills to improve analysis capabilities.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-96.794725', '32.767715']
+                            type: "Point",
+                            coordinates: [ -96.794725, 32.767715 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'paris',
+                            location: "paris",
                             description:
-                                '<span class="sect-title">French Language Skills</span><p>Demonstrated desire to continue learning and discipline to acquire skills. Aussi, les pain au chocolat sont excellent.</p>'
+                                `<span class="sect-title">French Language Skills</span><p>Demonstrated desire to continue learning and discipline to acquire skills. Aussi, les pain au chocolat sont excellent.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['2.293518', '48.858462']
+                            type: "Point",
+                            coordinates: [ 2.293518, 48.858462 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'ftleavenworth',
+                            location: "ftleavenworth",
                             description:
-                                '<span class="sect-title">CGI Federal</span><p>Trained Research Managers for the Human Terrain System. Developed and taught GIS-based courses for adult learners using the ADDIE methodology. Successfully communicated very technical subject matter to non-technical audience of learners.</p>'
+                                `<span class="sect-title">CGI Federal</span><p>Trained Research Managers for the Human Terrain System. Developed and taught GIS-based courses for adult learners using the ADDIE methodology. Successfully communicated very technical subject matter to non-technical audience of learners.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-94.917270', '39.358426']
+                            type: "Point",
+                            coordinates: [ -94.917270, 39.358426 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'kuwait-city',
+                            location: "kuwait-city",
                             description:
-                                '<span class="sect-title">US Army, 35th Infantry Division</span><p>Served as the Subject Matter Expert for all matters related to Human Intelligence Collection and Counter-Intelligence for the Division Commander. Coordinated the day-to-day operations, including planning, operational control, and reporting. Mentored subordinates and provided quality assurance for all products.</p>'
+                            `<span class="sect-title">US Army, 35th Infantry Division</span><p>Served as the Subject Matter Expert for all matters related to Human Intelligence Collection and Counter-Intelligence for the Division Commander. Coordinated the day-to-day operations, including planning, operational control, and reporting. Mentored subordinates and provided quality assurance for all products.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['48.171847', '28.905663']
+                            type: "Point",
+                            coordinates: [ 48.171847, 28.905663 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'opks_dea',
+                            location: "opks_dea",
                             description:
-                                '<span class="sect-title">Missouri Army National Guard</span><p>Supported federal criminal investigations through data mining and research of individuals. Created maps, link analysis charts, event-timeline products, and written reports in support of criminal prosecutions.Used Cellebrite products to collect cell phone evidence.</p>'
+                                `<span class="sect-title">Missouri Army National Guard</span><p>Supported federal criminal investigations through data mining and research of individuals. Created maps, link analysis charts, event-timeline products, and written reports in support of criminal prosecutions.Used Cellebrite products to collect cell phone evidence.</p>`
                         },
                         geometry: {
-                            type: 'Point',
-                            coordinates: ['-94.675231', '38.927940']
+                            type: "Point",
+                            coordinates: [ -94.675231, 38.927940 ]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'esri',
+                            location: "esri",
                             description:
-                                '<span class="sect-title">ESRI</span><h3>ArcGIS Server Administrator</h3><p>Installation and administration of ArcGIS Server.</p>'
+                                `<span class="sect-title">ESRI</span><h3>ArcGIS Server Administrator</h3><p>Installation and administration of ArcGIS Server.</p>`
                         },
                         geometry: {
-                            type: 'Point',
+                            type: "Point",
                             coordinates: [-117.190277, 34.057240]
                         }
                     },
                     {
-                        type: 'Feature',
+                        type: "Feature",
                         properties: {
-                            location: 'kansas-city',
+                            location: "kansas-city",
                             description:
-                                '<span class="sect-title">Contact Info</span><p><ul class="list-group"><li class="list-group-item"><span class="label">Email</span><span class="data"><a href="mailto:chad@codingbychad.com">chad@codingbychad.com</a></span></li><li class="list-group-item"><span class="label">Phone</span><span class="data">(719) 839-1071</span></li><li class="list-group-item"><span class="label">LinkedIn Profile</span><span class="data"><a href="https://www.linkedin.com/in/chadesmith" target="_blank">Chad Smith</a></span></li><li class="list-group-item"><span class="label">GitHub Profile</span><span class="data"><a href="https://github.com/ChadESmitdiv2" target="_blank">ChadESmith</a></span></li></ul></p>'
+                                `<span class="sect-title">Contact Info</span><p><ul class="list-group"><li class="list-group-item"><span class="label">Email</span><span class="data"><a href="mailto:chad@codingbychad.com">chad@codingbychad.com</a></span></li><li class="list-group-item"><span class="label">Phone</span><span class="data">(719) 839-1071</span></li><li class="list-group-item"><span class="label">LinkedIn Profile</span><span class="data"><a href="https://www.linkedin.com/in/chadesmith" target="_blank">Chad Smith</a></span></li><li class="list-group-item"><span class="label">GitHub Profile</span><span class="data"><a href="https://github.com/ChadESmitdiv2" target="_blank">ChadESmith</a></span></li></ul></p>`
                         },
                         geometry: {
-                            type: 'Point',
+                            type: "Point",
                             coordinates: [-94.585818, 39.103259]
                         }
                     }
                 ]
             };
 
-            map.on('load', function ()
+            map.on("load", function ()
             {
                 CreateMarkers();
             });
-            map.on('click', 'markers', function (e)
+            map.on("click", "markers", function (e)
             {
                 var coordinates = e.features[0].geometry.coordinates.slice();
                 var description = e.features[0].properties.description;
-                console.log('Event ', e);
                 var pageLocation = document.getElementById(e.features[0].properties.location);
-                console.log('My argument: ', pageLocation);
                 pageLocation.scrollIntoView(true);
                 while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
                 }
-                new mapboxgl.Popup({ className: 'popups' })
+                new mapboxgl.Popup({ className: "popups" })
                     .setLngLat(coordinates)
                     .setHTML(description)
                     .addTo(map);
             });
-            map.on('mouseenter', 'markers', function ()
+            map.on("mouseenter", "markers", function ()
             {
-                map.getCanvas().style.cursor = 'pointer';
+                map.getCanvas().style.cursor = "pointer";
             });
-            map.on('mouseleave', 'markers', function ()
+            map.on("mouseleave", "markers", function ()
             {
-                map.getCanvas().style.cursor = '';
+                map.getCanvas().style.cursor = "hand";
             });
 
             function CreateMarkers()
             {
-                map.addSource('markers',
+                map.addSource("markers",
                     {
-                        type: 'geojson',
+                        type: "geojson",
                         data: markerPoints
                     });
                 map.addLayer({
-                    id: 'markers',
-                    type: 'circle',
-                    source: 'markers',
+                    id: "markers",
+                    type: "circle",
+                    source: "markers",
                     paint: {
-                        'circle-radius': {
+                        "circle-radius": {
                             base: 14,
                             stops: [
                                 [0, 10],
                                 [22, 180]
                             ]
                         },
-                        'circle-color': "#43b0f1",
-                        'circle-opacity': .75,
-                        'circle-stroke-color': "#1e3d58",
-                        'circle-stroke-width': 4
+                        "circle-color": "#43b0f1",
+                        "circle-opacity": .75,
+                        "circle-stroke-color": "#1e3d58",
+                        "circle-stroke-width": 4
                     }
                 })
             }
 
             var chapters = {
+                overview: {
+                    bearing: 0,
+                    center: [-94.585818, 39.103259],
+                    zoom: 11.5,
+                    speed: 0.6,
+                    pitch: 40
+                },
                 centriq: {
                     bearing: 0,
                     center: [-94.61131, 38.9693],
@@ -719,7 +724,7 @@
                     zoom: 13.5,
                     pitch: 20
                 },
-                'kuwait-city': {
+                "kuwait-city": {
                     bearing: 25,
                     center: [48.171847, 28.905663],
                     zoom: 13,
@@ -780,14 +785,7 @@
                     speed: 0.6,
                     pitch: 40
                 },
-                'kansas-city': {
-                    bearing: 0,
-                    center: [-94.585818, 39.103259],
-                    zoom: 11.5,
-                    speed: 0.6,
-                    pitch: 40
-                },
-                overview: {
+                "kansas-city": {
                     bearing: 0,
                     center: [-94.585818, 39.103259],
                     zoom: 11.5,
@@ -795,18 +793,38 @@
                     pitch: 40
                 }
             };
-            var activeChapterName = 'overview';
+            var activeChapterName = "overview";
             window.onscroll = function ()
             {
+                MoveMap();
+            };
+
+            function MoveMap() {
                 var chapterNames = Object.keys(chapters);
                 for (var i = 0; i < chapterNames.length; i++) {
                     var chapterName = chapterNames[i];
-                    if (isElementOnScreen(chapterName)) {
-                        setActiveChapter(chapterName);
-                        return;
+                        if (isElementOnScreen(chapterName)) {
+                            setActiveChapter(chapterName);
+                            break;
+                        }
+                }
+            }
+
+            var features = document.getElementById("features");
+            var pageWidth = document.documentElement.clientWidth;
+
+            features.addEventListener("scroll", function() {
+                if (pageWidth < 601) {
+                    var chapterNames = Object.keys(chapters);
+                for (var i = 0; i < chapterNames.length; i++) {
+                    var chapterName = chapterNames[i];
+                        if (isElementOnMobileScreen(chapterName)) {
+                            setActiveChapter(chapterName);
+                            break;
+                        }
                     }
                 }
-            };
+            })
 
             function setActiveChapter(chapterName)
             {
@@ -830,12 +848,36 @@
             function isElementOnScreen(id)
             {
                 var bounds = document.getElementById(id).getBoundingClientRect();
-                var viewHeight = Math.max(
-                    document.documentElement.clientHeight,
-                    window.innerHeight
-                );
-                return !(bounds.bottom < 0 || bounds.top - viewHeight >= 20);
+                var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                var thirtyPercent = Math.floor(bounds.height * 0.30);
+                var mostlyOffPage = (bounds.bottom - thirtyPercent < 0);
+                var aboveHorizon = viewHeight > bounds.top;
+                var bottomAboveHorizon = viewHeight > bounds.bottom;
+                var topOffPage = bounds.top < 0;
+                var bottomOffPage = bounds.bottom < 0;
+                if (mostlyOffPage) {
+                    return false;
+                }
+                return (aboveHorizon && !bottomAboveHorizon) || (aboveHorizon && !bottomOffPage);
             }
+
+            function isElementOnMobileScreen(id)
+            {
+                var bounds = document.getElementById(id).getBoundingClientRect();
+                var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                var mapContainer = document.getElementById("map-container").getBoundingClientRect();
+                var triggerPoint = (viewHeight - mapContainer.bottom) * .30;
+                var mostlyOffPage = (bounds.bottom < triggerPoint + mapContainer.bottom);
+                var aboveHorizon = viewHeight > bounds.top;
+                var bottomAboveHorizon = viewHeight > bounds.bottom;
+                var topOffPage = bounds.top < mapContainer.bottom;
+                var bottomOffPage = bounds.bottom < mapContainer.bottom;
+                if (mostlyOffPage) {
+                    return false;
+                }
+                return (aboveHorizon && !bottomAboveHorizon) || (aboveHorizon && !bottomOffPage);
+            }
+
         </script>
     </body>
 

@@ -32,7 +32,7 @@ h1 {
 .map-container {
     grid-column: startMap / endMap;
     position: fixed;
-    width: 50%;
+    width: calc(50% - 12px);
     height: 100%;
 }
 
@@ -46,11 +46,12 @@ h1 {
 #features {
     grid-column: startText / endText;
     font-family: sans-serif;
+    border-radius: 8px;
     overflow-y: scroll;
     width: calc(100% - 24px);
     display: grid;
     grid-template-rows: repeat(16, auto);
-    row-gap: 52px;
+    row-gap: 24px;
     -ms-overflow-style: none;
 }
 
@@ -60,7 +61,7 @@ h1 {
 
 section {
     grid-row: auto;
-    padding: 16px 24px 8px 24px;
+    padding: 24px 16px 16px 16px;
     line-height: 24px;
     border: none;
     border-radius: 8px;
@@ -76,8 +77,9 @@ section.active {
 
 .title {
     margin: 0 auto;
+    box-sizing: content-box;
     text-align: center;
-    padding: 8px 24px 16px 24px;
+    padding: 8px 0;
     background-color: var(--royal);
     color: var(--white);
     border-radius: 8px;
@@ -267,7 +269,7 @@ a:hover, a:focus {
 
 .home-link {
     text-align: center;
-    margin: auto 0;
+    margin: 32px 0;
     text-decoration: none;
     min-height: 25vh;
     color: var(--white);
@@ -279,13 +281,9 @@ a:hover, a:focus {
     cursor: pointer;
 }
 
-#kansas-city {
-    margin: 48px 0 0 0;
-}
-
-#overview {
+/* #overview {
     opacity: 1;
-}
+} */
 
 .icon {
     background-color: var(--white);
@@ -308,15 +306,15 @@ a:hover, a:focus {
         position: fixed;
         top: 0;
         left: 0;
-        width: calc(100% - 16px);
+        width: 100%;
         height: 50%;
-        margin: 2px 8px 16px 8px;
+        margin: 0;
     }
 
     #map {
         width: 100%;
         height: 100%;
-        box-sizing: content-box;
+        box-sizing: border-box;
         border-radius: 8px;
     }
 
@@ -326,7 +324,7 @@ a:hover, a:focus {
         top: calc(50% + 16px);
         width: calc(100vw - 24px);
         box-sizing: border-box;
-        row-gap: 24px;
+        row-gap: 16px;
     }
     section {
         grid-row: auto;
