@@ -467,8 +467,8 @@
                 pitch: 0
             });
 
-            // map.addControl(new mapboxgl.NavigationControl("top-right"));
-            // map.addControl(new mapboxgl.ScaleControl({maxWidth: 200, unit: "imperial"}));
+            map.addControl(new mapboxgl.NavigationControl("top-right"));
+            map.addControl(new mapboxgl.ScaleControl({maxWidth: 200, unit: "imperial"}));
 
             var markerPoints = {
                 type: "FeatureCollection",
@@ -794,37 +794,33 @@
                 }
             };
             var activeChapterName = "overview";
+            var features = document.getElementById("features");
+            var pageWidth = document.documentElement.clientWidth;
+
             window.onscroll = function ()
             {
                 MoveMap();
             };
 
+            features.addEventListener("scroll", function() {
+                if (pageWidth < 601) {
+                    MoveMap();
+                }
+            });
+
+
             function MoveMap() {
                 var chapterNames = Object.keys(chapters);
                 for (var i = 0; i < chapterNames.length; i++) {
                     var chapterName = chapterNames[i];
-                        if (isElementOnScreen(chapterName)) {
-                            setActiveChapter(chapterName);
-                            break;
-                        }
+                    if (isElementVisible(chapterName)) {
+                        setActiveChapter(chapterName);
+                        break;
+                    }
                 }
             }
 
-            var features = document.getElementById("features");
-            var pageWidth = document.documentElement.clientWidth;
 
-            features.addEventListener("scroll", function() {
-                if (pageWidth < 601) {
-                    var chapterNames = Object.keys(chapters);
-                for (var i = 0; i < chapterNames.length; i++) {
-                    var chapterName = chapterNames[i];
-                        if (isElementOnMobileScreen(chapterName)) {
-                            setActiveChapter(chapterName);
-                            break;
-                        }
-                    }
-                }
-            })
 
             function setActiveChapter(chapterName)
             {
@@ -845,36 +841,26 @@
                 activeChapterName = chapterName;
             }
 
-            function isElementOnScreen(id)
-            {
-                var bounds = document.getElementById(id).getBoundingClientRect();
-                var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-                var thirtyPercent = Math.floor(bounds.height * 0.30);
-                var mostlyOffPage = (bounds.bottom - thirtyPercent < 0);
-                var aboveHorizon = viewHeight > bounds.top;
-                var bottomAboveHorizon = viewHeight > bounds.bottom;
-                var topOffPage = bounds.top < 0;
-                var bottomOffPage = bounds.bottom < 0;
-                if (mostlyOffPage) {
-                    return false;
-                }
-                return (aboveHorizon && !bottomAboveHorizon) || (aboveHorizon && !bottomOffPage);
-            }
-
-            function isElementOnMobileScreen(id)
+            function isElementVisible(id)
             {
                 var bounds = document.getElementById(id).getBoundingClientRect();
                 var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
                 var mapContainer = document.getElementById("map-container").getBoundingClientRect();
-                var triggerPoint = (viewHeight - mapContainer.bottom) * .30;
-                var mostlyOffPage = (bounds.bottom < triggerPoint + mapContainer.bottom);
                 var aboveHorizon = viewHeight > bounds.top;
                 var bottomAboveHorizon = viewHeight > bounds.bottom;
-                var topOffPage = bounds.top < mapContainer.bottom;
-                var bottomOffPage = bounds.bottom < mapContainer.bottom;
-                if (mostlyOffPage) {
-                    return false;
+                var mostlyOffPage;
+                var bottomOffPage;
+                if (document.documentElement.clientWidth < 601) // mobile settings;
+                {
+                    // viewHeight - mapContainer.bottom is top of "features" display area
+                    var triggerPoint = (viewHeight - mapContainer.bottom) * .30;
+                    mostlyOffPage = bounds.bottom < triggerPoint + mapContainer.bottom;
+                    bottomOffPage = bounds.bottom < mapContainer.bottom;
+                } else { // desktop settings;
+                    mostlyOffPage = bounds.bottom - Math.floor(bounds.height * 0.30) < 0;
+                    bottomOffPage = bounds.bottom < 0;
                 }
+                if (mostlyOffPage) return false;
                 return (aboveHorizon && !bottomAboveHorizon) || (aboveHorizon && !bottomOffPage);
             }
 
