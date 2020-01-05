@@ -271,7 +271,7 @@ a:hover, a:focus {
     text-align: center;
     margin: 32px 0;
     text-decoration: none;
-    min-height: 30vh;
+    min-height: 40vh;
     color: var(--white);
 }
 
