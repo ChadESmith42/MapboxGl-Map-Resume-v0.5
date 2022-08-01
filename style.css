@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Special+Elite');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
 
 :root {
         --navy: #1e3d58;
@@ -9,10 +9,13 @@
         --opaque-navy: rgba(30, 61, 88, 0.5);
         --opaque-royal: rgba(5, 125, 205, 0.5);
         --opaque-grotto: rgba(67, 176, 241, 0.5);
+        --black: #1a1a1a;
+        --serif: 'Playfair Display', serif;
+        --sans: 'Open Sans', sans-serif;
 }
 
 body {
-    font-family: "Oswald";
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
     background-color: var(--navy);
@@ -23,7 +26,7 @@ body {
 }
 
 h1 {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 32px;
     line-height: 48px;
     font-weight: 700;
@@ -45,7 +48,7 @@ h1 {
 
 #features {
     grid-column: startText / endText;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border-radius: 8px;
     overflow-y: scroll;
     width: calc(100% - 24px);
@@ -83,6 +86,7 @@ section.active {
     background-color: var(--royal);
     color: var(--white);
     border-radius: 8px;
+    font-family: var(--serif);
 }
 
 .intro-card {
@@ -108,11 +112,24 @@ section.active {
     align-self: end;
     font-size: 24px;
     font-weight: 600;
+    font-family: var(--serif);
 }
 
 .intro-body {
     grid-column: startR / endR;
     grid-row: startBottom / endBottom;
+    padding: 0.25rem 1.5rem 0.5rem 0rem;
+    color: var(--black);
+}
+
+.technology-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.technology-item {
+    flex: 0 1 auto;
 }
 
 .avatar {
@@ -121,6 +138,10 @@ section.active {
     border-radius: 50%;
     float: left;
     margin: 10px;
+}
+
+.background-white {
+    background-color: white;
 }
 
 .card-group {
@@ -134,7 +155,8 @@ section.active {
     border: 2px solid var(--white);
     border-radius: 8px;
     background-color: var(--white);
-    padding: 8px 16px 0 16px;
+    margin: 0.5rem 1rem 0.75rem 1rem;
+    padding: 0.75rem 0.25rem 1rem 1rem;
 }
 
 .card:hover, .card:focus {
@@ -142,13 +164,13 @@ section.active {
 }
 
 .card-title {
+    font-family: 'Playfair Display', serif;
     font-size: 20px;
     font-weight: 600;
-    padding: 0;
-    margin: 0;
 }
 
 .card-text {
+    font-family: var(--sans);
     font-size: 18px;
     font-weight: 400;
 }
@@ -176,6 +198,17 @@ section.active {
     font-size: 20px;
     padding: 0 16px 0 0;
     margin: 0;
+}
+
+.knowledge-header {
+    margin: 0.5rem 0 0.5rem 0;
+    font-family: var(--serif);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.knowledge-item {
+    margin: 0.5rem 0 0.75rem 0.75rem;
 }
 
 .sect-text {
