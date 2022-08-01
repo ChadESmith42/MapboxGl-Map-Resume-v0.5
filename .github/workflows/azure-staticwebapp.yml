@@ -49,5 +49,5 @@ jobs:
         with:
           azcliversion: latest
           inlineScript: |
-            az storage blob upload-batch -s $GITHUB_WORKSPACE/src/ -d \$web --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
+            az storage blob upload-batch -s $GITHUB_WORKSPACE/ -d \$web --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
 
