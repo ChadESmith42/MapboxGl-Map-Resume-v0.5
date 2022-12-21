@@ -278,12 +278,28 @@
           src="./assets/images/social-block-untsocial.jpg"
         />
       </section>
+      <section id="quest">
+        <span class="sect-title">Software Engineer
+          <img src="./assets/images/quest-analytics.jpg" class="avatar" />
+        </span>
+        <div>Quest Analytics, LLC</div>
+        <div>September 2022 to Present</div>
+        <p>
+          Supported the full software development lifecycle for multiple .Net microservices and core platform applications.
+        </p>
+        <ul class="list-group">
+          <li class="list-group-item">React.js, Typescript, CSS, HTML5</li>
+          <li class="list-group-item">C#, ASP.Net, .Net Core, Microsoft SQL Server, Redis, SEQ, MongoDb</li>
+          <li class="list-group-item">Azure DevOps, Azure CLI, Docker, Git, CI/CD, Agile</li>
+          <li class="list-group-item">Unit Testing, XUnit</li>
+        </ul>
+      </section>
       <section id="cardinal">
         <span class="sect-title">Staff Software Engineer
           <img src="./assets/images/cardinal-health-logo.jpeg" class="avatar" />
         </span>
         <div>Cardinal Health - Sonexus</div>
-        <div>February 2022 to Present</div>
+        <div>February 2022 to September 2022</div>
         <p>
           Supported the full software development lifecycle for multiple customer-facing applications in the Specialty Pharmacy area.
         </p>
@@ -715,6 +731,13 @@
           zoom: 13.5,
           pitch: 20,
         },
+        quest: {
+          center: [-94.6914611, 38.9310843],
+          bearing: 0,
+          zoom: 12,
+          pitch: 20,
+          speed: 0.6
+        },
         cardinal: {
           center: [-97.00659124504207, 32.99487248973518],
           bearing: 0,
@@ -1052,6 +1075,17 @@
             geometry: {
               type: 'Point',
               coordinates: [-97.00659124504207, 32.99487248973518]
+            }
+          },
+          {
+            type: 'Feature',
+            properties: {
+              location: 'quest',
+              description: `<span class="sect-title">Quest Analytics</span><p>Supported the full SDLC for multiple microservices and the core business platform.</p>`
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [-94.6914611, 38.9310843]
             }
           }
         ],
