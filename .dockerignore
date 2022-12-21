@@ -1,0 +1,10 @@
+## git files
+.gitattributes
+.gitignore
+
+## Docker related files
+Dockerfile
+docker-compose.yml
+
+.vscode/
+.github/
