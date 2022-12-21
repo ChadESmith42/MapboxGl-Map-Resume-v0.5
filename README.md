@@ -4,7 +4,7 @@ For geographers, like me, location matters. A resume with just the facts of a jo
 
 ## Build this project
 
-Using Docker, save the repo to your local machine. Navigate to the folder where you've saved this project. Open a terminal/command prompt and type `docker-compose up`. Open your browser to `http://localhost:4200`.
+Using [Docker](http://docker.com), save this repo to your local machine. Navigate to the folder where you've saved this project. Open a terminal/command prompt and type `docker-compose up`. Open your browser to `http://localhost:4200`. Enjoy!
 
 ## Attribution
 
