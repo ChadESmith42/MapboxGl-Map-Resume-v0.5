@@ -1,6 +1,6 @@
-version: "1.0"
 services:
-  web:
-   build: .
+  map-resume:
+   image: chadesmith42/map-resume:latest
+   container_name: map-resume
    ports:
      - "4200:80"
