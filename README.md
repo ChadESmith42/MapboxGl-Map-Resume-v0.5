@@ -6,6 +6,20 @@ For geographers, like me, location matters. A resume with just the facts of a jo
 
 Using [Docker](http://docker.com), save this repo to your local machine. Navigate to the folder where you've saved this project. Open a terminal/command prompt and type `docker-compose up`. Open your browser to `http://localhost:4200`. Enjoy!
 
+You can also pull the Docker image directly from DockerHub.
+
+`docker image pull chadesmith42/map-resume:latest`
+
+Then run, `docker run -d -p 4200:80 --name map-resume chadesmith42/map-resume`. Open your browser to [localhost:4200](http://localhost:4200) to view the application.
+
+After you have finished, you remove the image and container from your computer by running the following commands in order:
+
+`docker container stop map-resume`
+
+`docker container rm map-resume`
+
+`docker image rm chadesmith42/map-resume:latest`
+
 ## Attribution
 
 I loosely based this project on a published web-map project I found online. Despite my best searching efforts, I haven't found the site as of the time of this publication. I wish that I could, so I could provide some credit where it is due. Some of the heavy lifting was done through that project. I modified my project to meet my needs, but I did get some core ideas of how to approach this via another developer. I'll update this portion as soon as I can find the project.
