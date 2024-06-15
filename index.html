@@ -6,8 +6,8 @@
     <link rel="icon" type="image/png" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Resume using an interactive map to display data. Authored by Chad Smith" />
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js"></script>
-    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css" rel="stylesheet" />
+    <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
   </head>
@@ -1060,7 +1060,7 @@
       /**
        * Creating the `Map` object.
        */
-      const map = new mapboxgl.Map({
+      const map = new maplibregl.Map({
         container: 'map',
         style: {
           version: 8,
@@ -1091,8 +1091,8 @@
       /**
        * Adding Map Controls
        */
-      map.addControl(new mapboxgl.NavigationControl('top-right'));
-      map.addControl(new mapboxgl.ScaleControl({ maxWidth: 200, unit: 'imperial' }));
+      map.addControl(new maplibregl.NavigationControl('top-right'));
+      map.addControl(new maplibregl.ScaleControl({ maxWidth: 200, unit: 'imperial' }));
 
 
       /**
@@ -1116,7 +1116,7 @@
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
-        new mapboxgl.Popup({ className: 'popups' })
+        new maplibregl.Popup({ className: 'popups' })
           .setLngLat(coordinates)
           .setHTML(description)
           .addTo(map);
