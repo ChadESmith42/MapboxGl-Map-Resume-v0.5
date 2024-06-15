@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Chad Smith Storymap Resume v2.0</title>
     <link rel="icon" type="image/png" href="./favicon.ico" />
-    <meta
-      name="viewport"
-      content="initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
-    <meta
-      name="description"
-      content="Resume using an interactive map to display data. Authored by Chad Smith"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resume using an interactive map to display data. Authored by Chad Smith" />
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js"></script>
-    <link
-      href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald"
-      rel="stylesheet"
-    />
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
   </head>
-
   <body>
     <div class="map-container" id="map-container">
       <div id="map" class="map"></div>
     </div>
-
     <div id="features">
       <a href="http://codingbychad.com">
         <h1 class="title" id="top">Chad Smith</h1>
       </a>
       <section id="overview" class="active no-highlight">
         <div class="intro-card">
-          <img src="./assets/images/chad.jpeg" class="intro-img" />
+          <img src="./assets/images/chad.jpeg" class="intro-img" alt="Headshot of Chad" />
           <span class="intro-title">
             Full-Stack ASP.NET Web Developer and GIS Analyst
           </span>
@@ -216,14 +202,11 @@
       <section id="centriq" class="education">
         <span class="sect-title">
           Centriq Career Course
-          <img
-            src="./assets/images/centriq-training-squarelogo-1514989930117.png"
-            class="avatar"
-          />
+          <img src="./assets/images/centriq-training-squarelogo-1514989930117.png" class="avatar" alt="Centriq Training logo" />
         </span>
         <div>
-          <span class="place">Leawood, Kansas</span
-          ><span class="year">2018</span>
+          <span class="place">Leawood, Kansas</span>
+          <span class="year">2018</span>
         </div>
         <p class="sect-text">
           Solid foundation of designing and developing full-stack web
@@ -240,15 +223,16 @@
           </li>
           <li class="list-group-item">Coding in a team environment</li>
         </ul>
-        <img class="img-responsive" src="./assets/images/CentriqTraining.png" />
+        <img class="img-responsive" src="./assets/images/CentriqTraining.png" alt="Centriq Training building as seen from the street"/>
       </section>
       <section id="esri" class="education">
         <span class="sect-title">
           ESRI
-          <img src="./assets/images/Esri-Logo-267x300-2.png" class="avatar" />
+          <img src="./assets/images/Esri-Logo-267x300-2.png" class="avatar" alt="ESRI logo" />
         </span>
         <div>
-          <span class="place">Redlands, CA</span><span class="year">2015</span>
+          <span class="place">Redlands, CA</span>
+          <span class="year">2015</span>
         </div>
         <p>
           <span class="cert-title"
@@ -257,12 +241,12 @@
           Learned to plan, configure, deploy, and manage an ArcGIS for Server
           system, that enables GIS content sharing across enterprise systems.
         </p>
-        <img class="img-responsive" src="./assets/images/esri-campus.jpg" />
+        <img class="img-responsive" src="./assets/images/esri-campus.jpg" alt="ESRI Campus building in Redlands, CA"/>
       </section>
       <section id="denton" class="education">
         <span class="sect-title">
           University of North Texas
-          <img src="./assets/images/unt logo.png" class="avatar" />
+          <img src="./assets/images/unt logo.png" class="avatar" alt="UNT Logo"/>
         </span>
         <div>
           <span class="place">Denton, Texas</span><span class="year">2009</span>
@@ -273,14 +257,11 @@
           Modeling/Spatial Statistics. Recognized for excellence during UNT
           Scholar's Day 2008.
         </p>
-        <img
-          class="img-responsive"
-          src="./assets/images/social-block-untsocial.jpg"
-        />
+        <img class="img-responsive" src="./assets/images/social-block-untsocial.jpg" alt=""/>
       </section>
       <section id="quest">
         <span class="sect-title">Software Engineer
-          <img src="./assets/images/quest-analytics.png" class="avatar" />
+          <img src="./assets/images/quest-analytics.png" class="avatar" alt="Quest Analytics logo"/>
         </span>
         <div>Quest Analytics, LLC</div>
         <div>September 2022 to Present</div>
@@ -296,7 +277,7 @@
       </section>
       <section id="cardinal">
         <span class="sect-title">Staff Software Engineer
-          <img src="./assets/images/cardinal-health-logo.jpeg" class="avatar" />
+          <img src="./assets/images/cardinal-health-logo.jpeg" class="avatar" alt="Cardinal Health logo" />
         </span>
         <div>Cardinal Health - Sonexus</div>
         <div>February 2022 to September 2022</div>
@@ -312,7 +293,7 @@
       </section>
       <section id="vmlyr">
         <span class="sect-title">Technology Specialist
-          <img src="./assets/images/ecco-select-logo.png" class="avatar background-white" />
+          <img src="./assets/images/ecco-select-logo.png" class="avatar background-white" alt="ECCO Select logo" />
         </span>
         <div>ECCO-Select on behalf of VMLY&R</div>
         <div>September 2021 to January 2022</div>
@@ -326,11 +307,11 @@
           <li class="list-group-item">Git, GitHub</li>
           <li class="list-group-item">JetBrains IntelliJ software</li>
         </ul>
-        <img class="img-responsive" src="./assets/images/vmlyr-building.jpeg" />
+        <img class="img-responsive" src="./assets/images/vmlyr-building.jpeg" alt="VMLY&R Building in Kansas City, MO" />
       </section>
       <section id="prime">
         <span class="sect-title">Software Engineer / Instructor
-          <img src="./assets/images/prime-logo.png" class="avatar background-white" />
+          <img src="./assets/images/prime-logo.png" class="avatar background-white" alt="Prime Digital Academy logo" />
         </span>
         <div>Prime Digital Academy</div>
         <div>November 2020 to September 2021</div>
@@ -349,7 +330,7 @@
       <section id="blueCross">
         <span class="sect-title">
           Software Engineer II
-          <img src="./assets/images/bluekc-logo.jpg" class="avatar" />
+          <img src="./assets/images/bluekc-logo.jpg" class="avatar"  alt="Blue Cross Blue Shiled of KC logo" />
         </span>
         <div>Blue Cross Blue Shield of Kansas City</div>
         <div>November 2018 to November 2020</div>
@@ -365,12 +346,12 @@
           <li class="list-group-item">Microsoft Azure DevOps (ADO), Git</li>
           <li class="list-group-item">Apigee API Management</li>
         </ul>
-        <img src="./assets/images/bluekc-building.jpeg" class="img-responsive">
+        <img src="./assets/images/bluekc-building.jpeg" class="img-responsive" alt="Blue KC HQ in Kansas City, MO">
       </section>
       <section id="kuwait-city">
         <span class="sect-title">
           Division G2X
-          <img src="./assets/images/army emblem.png" class="avatar" />
+          <img src="./assets/images/army emblem.png" class="avatar" alt="US Army emblem" />
         </span>
         <div>35th Infantry Division, Kuwait</div>
         <div>May 2017 to April 2018</div>
@@ -391,15 +372,12 @@
             products.
           </li>
         </ul>
-        <img class="img-responsive" src="./assets/images/kuwaitcity.jpeg" />
+        <img class="img-responsive" src="./assets/images/kuwaitcity.jpeg" alt="Chad with Kuwait City skyline in the background"/>
       </section>
       <section id="opks_dea">
         <span class="sect-title">
           Criminal Intelligence Analyst
-          <img
-            src="./assets/images/Army_National_Guard_logo.png"
-            class="avatar"
-          />
+          <img src="./assets/images/Army_National_Guard_logo.png" class="avatar" alt="US Army National Guard logo" />
         </span>
         <div>MOARNG - Counter-Drug Program, Overland Park, Kansas</div>
         <div>October 2016 to May 2017</div>
@@ -423,7 +401,7 @@
       <section id="opks_bv">
         <span class="sect-title">
           GIS Analyst 4
-          <img src="./assets/images/blackVeatch.jpg" class="avatar" />
+          <img src="./assets/images/blackVeatch.jpg" class="avatar" alt="Black & Veatch logo" />
         </span>
         <div>Black &amp; Veatch, Overland Park, Kansas</div>
         <div>February 2015 to April 2016</div>
@@ -438,7 +416,7 @@
             databases and geospatial data-sets.
           </li>
           <li class="list-group-item">
-            Created map web applications using ESRI’s web API for ArcGIS Server.
+            Created map web applications using ESRI's web API for ArcGIS Server.
           </li>
           <li class="list-group-item">
             Introduced key efficiencies in data management by migrating data
@@ -455,14 +433,14 @@
       <section id="kosovo">
         <span class="sect-title">
           Human Intelligence Collector Team Leader
-          <img src="./assets/images/army emblem.png" class="avatar" />
+          <img src="./assets/images/army emblem.png" class="avatar" alt="US Army emblem" />
         </span>
         <div>504th BfSB, Camp Bondsteel, Kosovo</div>
         <div>December 2013 to October 2014</div>
         <div>
           <ul class="list-group">
             <li class="list-group-item">
-              Supported the Brigade Commander’s Priority Intelligence
+              Supported the Brigade Commander's Priority Intelligence
               Requirements through Military Source Operations and Strategic
               Debriefing.
             </li>
@@ -481,12 +459,12 @@
             </li>
           </ul>
         </div>
-        <img src="./assets/images/kosovo.jpg" class="img-responsive" />
+        <img src="./assets/images/kosovo.jpg" class="img-responsive" alt="Signpost with multiple foreign cities" />
       </section>
       <section id="ftleavenworth">
         <span class="sect-title">
           Curriculum Instructor
-          <img src="./assets/images/cgi logo.jpg" class="avatar" />
+          <img src="./assets/images/cgi logo.jpg" class="avatar" alt="CGI Federal logo" />
         </span>
         <div>CGI Federal, Fort Leavenworth, Kansas</div>
         <div>February 2013 to October 2014</div>
@@ -505,7 +483,7 @@
       <section id="highlandsranch">
         <span class="sect-title">
           Law Enforcement Analyst
-          <img src="./assets/images/BAIR Logo.jpg" class="avatar" />
+          <img src="./assets/images/BAIR Logo.jpg" class="avatar" alt="BAIR Analytics logo" />
         </span>
         <div>BAIR Analytics, INC, Highlands Ranch, Colorado</div>
         <div>August 2012 to February 2013</div>
@@ -525,16 +503,13 @@
             Conducted advanced GIS analysis for selected clients.
           </li>
         </ul>
-        <img
-          src="./assets/images/colorado.jpg"
-          class="img-responsive img-rounded"
-        />
+        <img src="./assets/images/colorado.jpg" class="img-responsive img-rounded" alt="Wheeler Lake in Colorado" />
       </section>
       <div class="spacer"></div>
       <section id="kabul">
         <span class="sect-title">
           Research Manager (GS-13)
-          <img src="./assets/images/army emblem.png" class="avatar" />
+          <img src="./assets/images/army emblem.png" class="avatar" alt="US Army emblem" />
         </span>
         <div>Human Terrain Systems (US Army TRADOC G2), Kabul, Afghanistan</div>
         <div>May 2011 to June 2012</div>
@@ -555,7 +530,7 @@
       <section id="macdill">
         <span class="sect-title">
           Senior Human Terrain Analyst
-          <img src="./assets/images/Courage Services Logo.png" class="avatar" />
+          <img src="./assets/images/Courage Services Logo.png" class="avatar" alt="Courage Services logo" />
         </span>
         <div>Courage Services, MacDill AFB, Florida</div>
         <div>October 2010 to May 2011</div>
@@ -577,10 +552,7 @@
       <div class="spacer"></div>
       <section id="dallas">
         <span class="sect-title">
-          Senior Corporal of Police<img
-            src="./assets/images/badge-dpd.png"
-            class="avatar"
-          />
+          Senior Corporal of Police<img src="./assets/images/badge-dpd.png" class="avatar" alt="Dallas Police badge" />
         </span>
         <div>Dallas Police Department, Dallas, Texas</div>
         <div>September 2000 to August 2009</div>
@@ -602,12 +574,12 @@
             for over 15 million records
           </li>
         </ul>
-        <img src="./assets/images/police.jpg" class="img-responsive" />
+        <img src="./assets/images/police.jpg" class="img-responsive" alt="Dallas PD HQ in Dallas, TX" />
       </section>
       <section id="paris">
         <span class="sect-title">Foreign Language</span>
         <p>
-          <img src="./assets/images/paris.jpeg" class="avatar" />I read and
+          <img src="./assets/images/paris.jpeg" class="avatar" alt="Chad with the Eifel Tower in the background" />I read and
           write French at a conversant or literate level. I speak French at an
           elementary or conversational level. I learned French in adulthood. I
           used the Memrise application to learn vocabulary and grammar rules. I
@@ -630,68 +602,62 @@
       </section>
       <section id="coderDojo">
         <span class="sect-title">Coder Ninja Mentor
-          <img src="./assets/icons/coder_dojo.png" class="avatar" />
+          <img src="./assets/icons/coder_dojo.png" class="avatar" alt="Coder Dojo logo" />
         </span>
         <div>Coder Dojo of Kansas City</div>
         <div>June 2018 to November 2020</div>
         <p>
           I mentored children from ages 8 to 16 in software development. Most of the kids were using Scratch, a visual IDE developed by MIT. Some advanced students were studying Javascript and C#. My role was to answer questions and help students discover the answer using their own skills.
         </p>
-        <img src="./assets/images/coder-dojo-mentor.jpeg" class="img-responsive" />
+        <img src="./assets/images/coder-dojo-mentor.jpeg" class="img-responsive" alt="Chad helping a Code Ninja with their code" />
       </section>
       <section id="ngGirls">
         <span class="sect-title">Workshop Mentor
-          <img src="./assets/icons/ng_girls.jpeg" class="avatar" />
+          <img src="./assets/icons/ng_girls.jpeg" class="avatar" alt="Ng Girls logo" />
         </span>
         <div>NgGirls</div>
         <div>July 2019 and July 2021</div>
         <div>
           I mentored aspiring Angular Developers during a 2-day workshop hosted by NgGirls in Kansas City, Missouri. My role was to help the attendees work through their project. I also helped answer questions they had about working as a professional developer and pursuing a technology career.
         </div>
-        <img src="./assets/images/ng-girls.jpeg" class="img-responsive" />
+        <img src="./assets/images/ng-girls.jpeg" class="img-responsive" alt="Chad holding up a coffee in front of the Ng Girls logo" />
       </section>
       <section id="kansas-city">
         <span class="sect-title">Contact</span>
         <ul class="list-group">
           <li class="list-group-item">
             <a href="mailto:chad@codingbychad.com">
-              <img class="icon" src="./assets/icons/email_icon.svg" />
+              <img class="icon" src="./assets/icons/email_icon.svg" alt="email icon" />
               chad@codingbychad.com
             </a>
           </li>
           <li class="list-group-item">
             <a href="tel:+017198391071">
-              <img class="icon" src="./assets/icons/phone_icon.svg" />
+              <img class="icon" src="./assets/icons/phone_icon.svg" alt="phone icon" />
               +1 719.839.1071
             </a>
           </li>
           <li class="list-group-item">
-            <a href="http://www.codingbychad.com" target="_blank">
-              <img class="icon" src="./assets/icons/web_icon.svg" />
+            <a href="http://www.codingbychad.com" target="_blank" rel="noopener">
+              <img class="icon" src="./assets/icons/web_icon.svg" alt="web icon" />
               codingbychad.com
             </a>
           </li>
           <li class="list-group-item">
             <a href="https://www.linkedin.com/in/chadesmith">
-              <img
-                class="icon"
-                src="./assets/icons/_ionicons_svg_logo-linkedin.svg"
-              />
+              <img class="icon" src="./assets/icons/_ionicons_svg_logo-linkedin.svg" alt="LinkedIn icon"/>
               LinkedIn Profile: chadesmith
             </a>
           </li>
           <li class="list-group-item">
-            <a href="https://github.com/ChadESmith42" target="_blank">
-              <img
-                class="icon"
-                src="./assets/icons/_ionicons_svg_logo-github.svg"
-              />
+            <a href="https://github.com/ChadESmith42" target="_blank" rel="noopener">
+              <img class="icon" src="./assets/icons/_ionicons_svg_logo-github.svg" alt="GitHub icon" />
               GitHub Profile: ChadESmith42
             </a>
           </li>
           <li class="list-group-item">
-            <a href="https://stackblitz.com/@ChadESmith42" target="_blank">
-              <img class="icon" src="./assets/icons/stackblitz.svg" />
+            <a href="https://stackblitz.com/@ChadESmith42" target="_blank" rel="noopener">
+              <img class="icon" src="./assets/icons/stackblitz.svg" alt="Stackblitz icon" />
               Stackblitz Profile: ChadESmith42
             </a>
           </li>
