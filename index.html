@@ -1062,26 +1062,7 @@
        */
       const map = new maplibregl.Map({
         container: 'map',
-        style: {
-          version: 8,
-          sources: {
-            'stamen-toner': {
-              type: 'raster',
-              tiles: ['https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png'],
-              tileSize: 256,
-              attribution: '&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
-            },
-          },
-          layers: [
-            {
-              id: 'stamen-toner',
-              type: 'raster',
-              source: 'stamen-toner',
-              minzoom: 0,
-              maxzoom: 22,
-            },
-          ],
-        },
+        style: 'https://tiles.stadiamaps.com/styles/stamen_toner.json',
         center: [-94.585818, 39.103259],
         zoom: 10,
         bearing: 0,
