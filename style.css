@@ -17,25 +17,25 @@
 body {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1rem;
     background-color: var(--navy);
-    width: calc(100% - 24px);
+    width: calc(100% - 1rem);
     display: grid;
-    grid-template-columns: [ startMap ] 50% [ endMap startText ] calc(50% - 48px) [ endText];
-    column-gap: 24px;
+    grid-template-columns: [ startMap ] 50% [ endMap startText ] calc(50% - 1rem) [ endText];
+    column-gap: 1rem;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 2rem;
+    line-height: 3rem;
     font-weight: 700;
 }
 
 .map-container {
     grid-column: startMap / endMap;
     position: fixed;
-    width: calc(50% - 12px);
+    width: calc(50% - 1rem);
     height: 100%;
 }
 
@@ -43,18 +43,18 @@ h1 {
     width: 100%;
     height: 100%;
     box-sizing: content-box;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 #features {
     grid-column: startText / endText;
     font-family: 'Open Sans', sans-serif;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow-y: scroll;
-    width: calc(100% - 24px);
+    width: 100%;
     display: grid;
     grid-template-rows: repeat(16, auto);
-    row-gap: 24px;
+    row-gap: 1rem;
     -ms-overflow-style: none;
 }
 
@@ -64,12 +64,12 @@ h1 {
 
 section {
     grid-row: auto;
-    padding: 24px 16px 16px 16px;
-    line-height: 24px;
+    padding: 1.5rem 1rem 1rem 1rem;
+    line-height: 1.5rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     opacity: 0.25;
-    font-size: 18px;
+    font-size: 1rem;
     background-color: var(--grotto);
     color: var(--navy);
 }
@@ -82,23 +82,23 @@ section.active {
     margin: 0 auto;
     box-sizing: content-box;
     text-align: center;
-    padding: 8px 0;
+    padding: 0.5rem 0;
     background-color: var(--royal);
     color: var(--white);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     font-family: var(--serif);
 }
 
 .intro-card {
     display: grid;
-    grid-template-columns: [ startL ] 80px [ endL startR ] auto [ endR ];
+    grid-template-columns: [ startL ] 5rem [ endL startR ] auto [ endR ];
     grid-template-rows: [ startTop ] auto [ endTop startBottom ] auto [ endBottom ];
-    column-gap: 16px;
+    column-gap: 1rem;
 }
 
 .intro-img {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 100%;
     grid-column: startL / endL;
     grid-row: startTop / endBottom;
@@ -110,7 +110,7 @@ section.active {
     grid-column: startR / endR;
     grid-row: startTop / endTop;
     align-self: end;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     font-family: var(--serif);
 }
@@ -133,11 +133,11 @@ section.active {
 }
 
 .avatar {
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     float: left;
-    margin: 10px;
+    margin: 0.5rem;
 }
 
 .background-white {
@@ -147,31 +147,31 @@ section.active {
 .card-group {
     display: grid;
     grid-template-rows: repeat(4, auto);
-    row-gap: 16px;
+    row-gap: 1rem;
 }
 
 .card {
     grid-row: auto;
-    border: 2px solid var(--white);
-    border-radius: 8px;
+    border: 0.125rem solid var(--white);
+    border-radius: 0.5rem;
     background-color: var(--white);
     margin: 0.5rem 1rem 0.75rem 1rem;
     padding: 0.75rem 0.25rem 1rem 1rem;
 }
 
 .card:hover, .card:focus {
-    border: 2px solid var(--navy);
+    border: 0.125rem solid var(--navy);
 }
 
 .card-title {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
 .card-text {
     font-family: var(--sans);
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -181,22 +181,22 @@ section.active {
 }
 
 .sect-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     padding: 0;
 }
 
 .place {
     font-weight: 700;
-    font-size: 20px;
-    padding: 0 8px 0 0;
+    font-size: 1.5rem;
+    padding: 0 0.5rem 0 0;
     margin: 0;
 }
 
 .year {
     font-weight: 700;
-    font-size: 20px;
-    padding: 0 16px 0 0;
+    font-size: 1.25rem;
+    padding: 0 1rem 0 0;
     margin: 0;
 }
 
@@ -213,15 +213,15 @@ section.active {
 
 .sect-text {
     display: block;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: normal;
-    margin: 24px 0 0 0;
+    margin: 1.5rem 0 0 0;
     width: 100%;
 }
 
 .cert-title {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .list-group {
@@ -231,7 +231,7 @@ section.active {
 }
 
 .list-group-item {
-    padding: 8px 0 0 0;
+    padding: 0.5rem 0 0 0;
 }
 
 a {
@@ -247,31 +247,31 @@ a:hover, a:focus {
 
 .img-responsive {
     box-sizing: content-box;
-    max-height: 300px;
-    max-width: calc(92vw - 24px);
-    border-radius: 8px;
+    max-height: 18.75rem;
+    max-width: calc(92vw - 1.5rem);
+    border-radius: 0.5rem;
 }
 
 .popups {
     font-family: 'Oswald', sans-serif;
-    max-width: 400px;
-    padding: 16px;
-    border-radius: 8px;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
 
 .mapboxgl-popup-content {
     background-color: var(--royal);
     color: var(--white);
-    font-size: 18px;
-    padding: 24px;
+    font-size: 1rem;
+    padding: 1.5rem;
 }
 
 .mapboxgl-popup-content .sect-title {
     background-color: var(--white);
     color: var(--navy);
     display: block;
-    padding: 8px 24px 8px 24px;
-    border-radius: 8px;
+    padding: 0.5rem 1.5rem 0.75rem 1.5rem;
+    border-radius: 0.5rem;
 }
 
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
@@ -281,13 +281,13 @@ a:hover, a:focus {
 
 .mapboxgl-popup-close-button {
     color: var(--white);
-    font-size: 20px;
-    padding: 4px;
-    height: 32px;
-    width: 32px;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    height: 2rem;
+    width: 2rem;
     background-color: var(--navy);
     border-radius: 50%;
-    margin: 8px;
+    margin: 0.5rem;
 }
 
 .mapboxgl-popup-close-button:hover,
@@ -297,12 +297,12 @@ a:hover, a:focus {
 }
 
 .label {
-    padding: 0 16px 0 0;
+    padding: 0 1rem 0 0;
 }
 
 .home-link {
     text-align: center;
-    margin: 32px 0;
+    margin: 2rem 0;
     text-decoration: none;
     min-height: 50vh;
     color: var(--white);
@@ -314,24 +314,20 @@ a:hover, a:focus {
     cursor: pointer;
 }
 
-/* #overview {
-    opacity: 1;
-} */
-
 .icon {
     background-color: var(--white);
-    padding: 2px;
-    border-radius: 8px;
-    border: 2px solid var(--navy);
-    margin: 0 8px 0 0;
-    height: 24px;
-    width: 24px;
+    padding: 0.125rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid var(--navy);
+    margin: 0 0.5rem 0 0;
+    height: 1.5rem;
+    width: 1.5rem;
     fill: var(--grotto);
 }
 
 @media only screen and (max-width: 600px) {
     body {
-        max-width: calc(600px - 48px);
+        max-width: 34.5rem;
         display: flow-root;
     }
 
@@ -348,24 +344,24 @@ a:hover, a:focus {
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        border-radius: 8px;
+        border-radius: 0.5rem;
     }
 
     #features {
         position: absolute;
         bottom: 0;
-        top: calc(50% + 16px);
-        width: calc(100vw - 24px);
+        top: calc(50% + 1rem);
+        width: calc(100vw - 1.5rem);
         box-sizing: border-box;
-        row-gap: 16px;
+        row-gap: 1rem;
     }
     section {
         grid-row: auto;
-        padding: 12px 8px 0 8px;
+        padding: 0.75rem 0.5rem 0 0.5rem;
     }
 
     .card {
-        padding: 12px 8px 0 8px;
-        margin: 8px 0 16px 0;
+        padding: 0.75rem 0.5rem 0 0.5rem;
+        margin: 0.5rem 0 1rem 0;
     }
 }
