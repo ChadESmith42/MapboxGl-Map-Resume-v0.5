@@ -138,6 +138,20 @@ section.active {
     border-radius: 50%;
     float: left;
     margin: 0.5rem;
+    object-fit: cover;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: var(--white);
+    color: var(--navy);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--sans);
+    font-weight: 400;
+    box-shadow: 0 0 0.5rem var(--navy);
+    z-index: 1000;
 }
 
 .background-white {
