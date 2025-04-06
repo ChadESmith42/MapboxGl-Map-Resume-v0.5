@@ -807,13 +807,24 @@
     </div>
     <script>
 
+      /**
+        * Add tooltips to all images on the page.
+      */
       document.addEventListener('DOMContentLoaded', () => {
+        handleTooltip();
+      });
+
+      /**
+       * Function to handle tooltips for images.
+       * This function will add a tooltip to each image on the page.
+       */
+      const handleTooltip = () => {
         const images = document.querySelectorAll('img');
         for (const image of images) {
-          console.log('Handling image', image);
           const tooltip = image.nextElementSibling;
           tooltip.textContent = image.alt;
           tooltip.style.display = 'none';
+
           image.addEventListener('mouseover', () => {
             tooltip.style.display = 'block';
           });
@@ -821,7 +832,7 @@
             tooltip.style.display = 'none';
           });
         }
-      });
+      }
 
       /**
        * Chapters are used to control the animation of the map movements.
